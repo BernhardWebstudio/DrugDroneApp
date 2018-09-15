@@ -10,17 +10,25 @@ import Foundation
 import Alamofire
 
 enum Router: URLRequestConvertible {
-    static let baseURLString = ""
+    static let baseURLString = "https://us-central1-drugdronefirebase.cloudfunctions.net"
+    static let airTrafficURL = "https://hackzurich.involi.live/http/"
     static let axaURL = "https://health.axa.ch/hack/api"
     static let axaAPIKey = "talented test"
     
     case careProviders(Parameters)
     case takePill
     
+    case airTraffic
+    
+    case requestDrone(Parameters)
+    case confirmDelivery(Parameters)
+    
     var baseURL: String {
         switch self {
         case .careProviders, .takePill:
             return Router.axaURL
+        case .airTraffic:
+            return Router.airTrafficURL
         default:
             return Router.baseURLString
         }
@@ -28,9 +36,9 @@ enum Router: URLRequestConvertible {
     
     var method: Alamofire.HTTPMethod {
         switch self {
-        case .careProviders:
+        case .careProviders, .airTraffic, .confirmDelivery:
             return .get
-        case .takePill:
+        case .takePill, .requestDrone:
             return .post
         }
     }
@@ -41,6 +49,12 @@ enum Router: URLRequestConvertible {
             return "care-providers"
         case .takePill:
             return "pharmacy/buy"
+        case .requestDrone:
+            return "requestDrone"
+        case .confirmDelivery:
+            return "confirmDrone"
+        case .airTraffic:
+            return ""
         }
     }
     
@@ -50,12 +64,18 @@ enum Router: URLRequestConvertible {
         urlRequest.httpMethod = method.rawValue
         
         switch self {
-        case .careProviders(let parameters):
+        case .careProviders(let parameters), .confirmDelivery(let parameters):
             urlRequest.setValue(Router.axaAPIKey, forHTTPHeaderField: "Authorization")
             return try Alamofire.URLEncoding.queryString.encode(urlRequest, with: parameters)
         case .takePill:
             urlRequest.setValue(Router.axaAPIKey, forHTTPHeaderField: "Authorization")
             return try Alamofire.URLEncoding.queryString.encode(urlRequest, with: nil)
+        case .requestDrone(let parameters):
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            return try Alamofire.JSONEncoding.default.encode(urlRequest, with: parameters)
+        case .airTraffic:
+            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            return try Alamofire.URLEncoding.queryString.encode(urlRequest, with: [:])
         }
     }
 }

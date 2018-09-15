@@ -14,10 +14,13 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
+    
+    override init() {
+        super.init()
+        FirebaseApp.configure()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        FirebaseApp.configure()
-        
         UNUserNotificationCenter.current().delegate = self
         
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
@@ -26,7 +29,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             completionHandler: {_, _ in })
         application.registerForRemoteNotifications()
         
+        addShortcuts(application: application)
+        
         return true
+    }
+    
+    func addShortcuts(application: UIApplication) {
+        let shortcut = UIMutableApplicationShortcutItem(
+            type: "0",
+            localizedTitle: "💉 Januvia",
+            localizedSubtitle: "Order drone delivery",
+            icon: UIApplicationShortcutIcon(type: .markLocation),
+            userInfo: nil)
+        let shortcut2 = UIMutableApplicationShortcutItem(
+            type: "1",
+            localizedTitle: "💊 Benadryl",
+            localizedSubtitle: "Order drone delivery",
+            icon: UIApplicationShortcutIcon(type: .markLocation),
+            userInfo: nil)
+        let shortcut3 = UIMutableApplicationShortcutItem(
+            type: "2",
+            localizedTitle: "💊 Ibuprofen",
+            localizedSubtitle: "Order drone delivery",
+            icon: UIApplicationShortcutIcon(type: .markLocation),
+            userInfo: nil)
+        
+        application.shortcutItems = [shortcut, shortcut2, shortcut3]
+    }
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        let action = shortcutItem.type
+        UserDefaults.standard.set(action, forKey: "pendingAction")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

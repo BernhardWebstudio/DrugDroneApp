@@ -47,4 +47,59 @@ class Client {
             }
         }
     }
+    
+    func requestAirTraffic(completion: @escaping (_ traffic: AirTrafficResponse?, _ error: Error?) -> Void) {
+        let request = Router.airTraffic
+        Alamofire.request(request).responseObject { (response: DataResponse<AirTrafficResponse>) in
+            switch response.result {
+            case .success(let value):
+                completion(value, nil)
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
+    
+    func confirmDelivery(droneID: String, completion: @escaping (_ error: Error?) -> Void) {
+        let parameters: Parameters = [
+            "userId": 1,
+            "droneId": droneID
+        ]
+        let request = Router.confirmDelivery(parameters)
+        Alamofire.request(request).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let val = value as? [String: String], let key = val["result"], key == "success" {
+                    completion(nil)
+                } else {
+                    completion(NSError(domain: "", code: -1, userInfo: nil))
+                }
+            case .failure(let error):
+                completion(error)
+            }
+        }
+    }
+    
+    func requestDrone(start: GeoLocation, end: GeoLocation, traffic: AirTrafficResponse, completion: @escaping (_ key: String?, _ error: Error?) -> Void) {
+        let parameters: Parameters = [
+            "traffic": traffic.toJSON(),
+            "drone": [
+                "start": start.toJSON(),
+                "end": end.toJSON(),
+            ]
+        ]
+        let request = Router.requestDrone(parameters)
+        Alamofire.request(request).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let val = value as? [String: String], let key = val["key"] {
+                    completion(key, nil)
+                } else {
+                    completion(nil, NSError(domain: "", code: -1, userInfo: nil))
+                }
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
 }

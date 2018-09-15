@@ -24,6 +24,7 @@ enum Stylesheet {
         
         static let flatButton = Style<FlatButton> {
             $0.backgroundColor = .gray
+            $0.titleColor = .white
             $0.pulseColor = .white
         }
     }

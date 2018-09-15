@@ -10,5 +10,6 @@ import Foundation
 
 struct OrderDTO {
     let orderID: String
+    let drug: Drug
     let careProvider: CareProvider
 }

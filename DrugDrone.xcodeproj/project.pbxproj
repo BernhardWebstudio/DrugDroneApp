@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8171D972C80019BF49A1450E /* Pods_DrugDrone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C29DCD3E533B8837813F940 /* Pods_DrugDrone.framework */; };
+		B5B0DF5A57A8CB17D3E7B6CB /* Pods_DrugDrone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548E718524513CFACF72DEF6 /* Pods_DrugDrone.framework */; };
 		E038C4E4214CF71000F291CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038C4E3214CF71000F291CE /* AppDelegate.swift */; };
-		E038C4E8214CF71000F291CE /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038C4E7214CF71000F291CE /* SecondViewController.swift */; };
+		E038C4E8214CF71000F291CE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038C4E7214CF71000F291CE /* ProfileViewController.swift */; };
 		E038C4EB214CF71000F291CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E038C4E9214CF71000F291CE /* Main.storyboard */; };
 		E038C4ED214CF71100F291CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E038C4EC214CF71100F291CE /* Assets.xcassets */; };
 		E038C4F0214CF71100F291CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E038C4EE214CF71100F291CE /* LaunchScreen.storyboard */; };
@@ -29,16 +29,26 @@
 		E038C51D214D484F00F291CE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038C51C214D484F00F291CE /* Location.swift */; };
 		E038C51F214D48B800F291CE /* GeoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038C51E214D48B800F291CE /* GeoCode.swift */; };
 		E038C521214D4CD200F291CE /* OrderDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E038C520214D4CD200F291CE /* OrderDTO.swift */; };
+		E08C3027214D8AE10042E806 /* DroneAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08C3026214D8AE10042E806 /* DroneAnnotation.swift */; };
+		E08C3029214D8CDD0042E806 /* OriginAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08C3028214D8CDD0042E806 /* OriginAnnotation.swift */; };
+		E08C302B214D8CEB0042E806 /* DestinationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08C302A214D8CEB0042E806 /* DestinationAnnotation.swift */; };
+		E08C302D214E2A240042E806 /* AirTrafficResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08C302C214E2A240042E806 /* AirTrafficResponse.swift */; };
+		E08C302F214E2A3A0042E806 /* AirTraffic.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08C302E214E2A3A0042E806 /* AirTraffic.swift */; };
 		E0CAC3FF214D62810030200A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CAC3FE214D62810030200A /* UIViewControllerExtension.swift */; };
+		E0CAC401214D68360030200A /* DrugDeliveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CAC400214D68360030200A /* DrugDeliveryViewController.swift */; };
+		E0CAC403214D74030030200A /* Firebase+ReactiveKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CAC402214D74030030200A /* Firebase+ReactiveKit.swift */; };
+		E0CAC405214D78980030200A /* DrugDeliveryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CAC404214D78980030200A /* DrugDeliveryViewModel.swift */; };
+		E0CAC407214D7C1D0030200A /* Drone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CAC406214D7C1D0030200A /* Drone.swift */; };
+		E0CAC409214D7CFA0030200A /* GeoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CAC408214D7CFA0030200A /* GeoLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C29DCD3E533B8837813F940 /* Pods_DrugDrone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrugDrone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4204AC20194184A62B35588E /* Pods-DrugDrone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugDrone.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrugDrone/Pods-DrugDrone.release.xcconfig"; sourceTree = "<group>"; };
-		6ECF038C72BFAE70215FB5E3 /* Pods-DrugDrone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugDrone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrugDrone/Pods-DrugDrone.debug.xcconfig"; sourceTree = "<group>"; };
+		4DF04324984924EC15D98F58 /* Pods-DrugDrone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugDrone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DrugDrone/Pods-DrugDrone.debug.xcconfig"; sourceTree = "<group>"; };
+		548E718524513CFACF72DEF6 /* Pods_DrugDrone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DrugDrone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		594558479966A6982F319D1C /* Pods-DrugDrone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DrugDrone.release.xcconfig"; path = "Pods/Target Support Files/Pods-DrugDrone/Pods-DrugDrone.release.xcconfig"; sourceTree = "<group>"; };
 		E038C4E0214CF71000F291CE /* DrugDrone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrugDrone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E038C4E3214CF71000F291CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E038C4E7214CF71000F291CE /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E038C4E7214CF71000F291CE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E038C4EA214CF71000F291CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E038C4EC214CF71100F291CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E038C4EF214CF71100F291CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,8 +69,18 @@
 		E038C51C214D484F00F291CE /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		E038C51E214D48B800F291CE /* GeoCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoCode.swift; sourceTree = "<group>"; };
 		E038C520214D4CD200F291CE /* OrderDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDTO.swift; sourceTree = "<group>"; };
+		E08C3026214D8AE10042E806 /* DroneAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneAnnotation.swift; sourceTree = "<group>"; };
+		E08C3028214D8CDD0042E806 /* OriginAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginAnnotation.swift; sourceTree = "<group>"; };
+		E08C302A214D8CEB0042E806 /* DestinationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationAnnotation.swift; sourceTree = "<group>"; };
+		E08C302C214E2A240042E806 /* AirTrafficResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTrafficResponse.swift; sourceTree = "<group>"; };
+		E08C302E214E2A3A0042E806 /* AirTraffic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTraffic.swift; sourceTree = "<group>"; };
 		E0CAC3FC214D60590030200A /* DrugDrone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DrugDrone.entitlements; sourceTree = "<group>"; };
 		E0CAC3FE214D62810030200A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		E0CAC400214D68360030200A /* DrugDeliveryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDeliveryViewController.swift; sourceTree = "<group>"; };
+		E0CAC402214D74030030200A /* Firebase+ReactiveKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase+ReactiveKit.swift"; sourceTree = "<group>"; };
+		E0CAC404214D78980030200A /* DrugDeliveryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDeliveryViewModel.swift; sourceTree = "<group>"; };
+		E0CAC406214D7C1D0030200A /* Drone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drone.swift; sourceTree = "<group>"; };
+		E0CAC408214D7CFA0030200A /* GeoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,26 +88,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8171D972C80019BF49A1450E /* Pods_DrugDrone.framework in Frameworks */,
+				B5B0DF5A57A8CB17D3E7B6CB /* Pods_DrugDrone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03CFE0B4D0BBAC4F08E3A6AB /* Pods */ = {
+		B06E384503121F018DCA3515 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6ECF038C72BFAE70215FB5E3 /* Pods-DrugDrone.debug.xcconfig */,
-				4204AC20194184A62B35588E /* Pods-DrugDrone.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		885101BAF0C8BE248AA6FAAE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0C29DCD3E533B8837813F940 /* Pods_DrugDrone.framework */,
+				548E718524513CFACF72DEF6 /* Pods_DrugDrone.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -97,8 +108,8 @@
 			children = (
 				E038C4E2214CF71000F291CE /* DrugDrone */,
 				E038C4E1214CF71000F291CE /* Products */,
-				03CFE0B4D0BBAC4F08E3A6AB /* Pods */,
-				885101BAF0C8BE248AA6FAAE /* Frameworks */,
+				EBD85DE91FE211B8B53F5A3D /* Pods */,
+				B06E384503121F018DCA3515 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,7 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				E038C4FC214D0D8100F291CE /* DrugsTableViewController.swift */,
-				E038C4E7214CF71000F291CE /* SecondViewController.swift */,
+				E0CAC400214D68360030200A /* DrugDeliveryViewController.swift */,
+				E038C4E7214CF71000F291CE /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				E038C4FF214D0F7900F291CE /* DrugsTableViewModel.swift */,
+				E0CAC404214D78980030200A /* DrugDeliveryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -169,9 +182,13 @@
 			isa = PBXGroup;
 			children = (
 				E038C516214D232700F291CE /* DTO */,
+				E08C302C214E2A240042E806 /* AirTrafficResponse.swift */,
+				E08C302E214E2A3A0042E806 /* AirTraffic.swift */,
+				E0CAC406214D7C1D0030200A /* Drone.swift */,
 				E038C502214D0FB500F291CE /* Drug.swift */,
 				E038C512214D22D300F291CE /* CareProvider.swift */,
 				E038C51E214D48B800F291CE /* GeoCode.swift */,
+				E0CAC408214D7CFA0030200A /* GeoLocation.swift */,
 				E038C51C214D484F00F291CE /* Location.swift */,
 			);
 			path = Model;
@@ -180,6 +197,7 @@
 		E038C504214D10FE00F291CE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E08C3023214D8A1D0042E806 /* Map */,
 				E038C508214D120000F291CE /* Style */,
 				E038C507214D11F500F291CE /* Cell */,
 			);
@@ -229,12 +247,32 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
+		E08C3023214D8A1D0042E806 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				E08C3026214D8AE10042E806 /* DroneAnnotation.swift */,
+				E08C3028214D8CDD0042E806 /* OriginAnnotation.swift */,
+				E08C302A214D8CEB0042E806 /* DestinationAnnotation.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		E0CAC3FD214D626F0030200A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				E0CAC3FE214D62810030200A /* UIViewControllerExtension.swift */,
+				E0CAC402214D74030030200A /* Firebase+ReactiveKit.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		EBD85DE91FE211B8B53F5A3D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DF04324984924EC15D98F58 /* Pods-DrugDrone.debug.xcconfig */,
+				594558479966A6982F319D1C /* Pods-DrugDrone.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,11 +282,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E038C4F4214CF71200F291CE /* Build configuration list for PBXNativeTarget "DrugDrone" */;
 			buildPhases = (
-				CAA252BF4B621692F275DDA3 /* [CP] Check Pods Manifest.lock */,
+				C7B947D6B52D804E31497B95 /* [CP] Check Pods Manifest.lock */,
 				E038C4DC214CF71000F291CE /* Sources */,
 				E038C4DD214CF71000F291CE /* Frameworks */,
 				E038C4DE214CF71000F291CE /* Resources */,
-				DAF7DF696919079C7759EF1B /* [CP] Embed Pods Frameworks */,
+				BEC065A7F020E7D0936A9066 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -315,28 +353,12 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CAA252BF4B621692F275DDA3 /* [CP] Check Pods Manifest.lock */ = {
+		BEC065A7F020E7D0936A9066 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DrugDrone-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DAF7DF696919079C7759EF1B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DrugDrone/Pods-DrugDrone-frameworks.sh",
@@ -356,6 +378,8 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
@@ -377,6 +401,28 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DrugDrone/Pods-DrugDrone-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7B947D6B52D804E31497B95 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DrugDrone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -385,20 +431,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				E038C519214D3C2100F291CE /* DataStore.swift in Sources */,
-				E038C4E8214CF71000F291CE /* SecondViewController.swift in Sources */,
+				E038C4E8214CF71000F291CE /* ProfileViewController.swift in Sources */,
 				E0CAC3FF214D62810030200A /* UIViewControllerExtension.swift in Sources */,
 				E038C515214D232200F291CE /* AxaResponseWrapper.swift in Sources */,
 				E038C4FD214D0D8100F291CE /* DrugsTableViewController.swift in Sources */,
+				E0CAC401214D68360030200A /* DrugDeliveryViewController.swift in Sources */,
 				E038C4E4214CF71000F291CE /* AppDelegate.swift in Sources */,
 				E038C500214D0F7900F291CE /* DrugsTableViewModel.swift in Sources */,
+				E08C3029214D8CDD0042E806 /* OriginAnnotation.swift in Sources */,
+				E0CAC407214D7C1D0030200A /* Drone.swift in Sources */,
 				E038C50F214D1FAA00F291CE /* Router.swift in Sources */,
+				E0CAC405214D78980030200A /* DrugDeliveryViewModel.swift in Sources */,
+				E08C302D214E2A240042E806 /* AirTrafficResponse.swift in Sources */,
+				E08C3027214D8AE10042E806 /* DroneAnnotation.swift in Sources */,
 				E038C51D214D484F00F291CE /* Location.swift in Sources */,
 				E038C506214D112400F291CE /* DrugTableViewCell.swift in Sources */,
 				E038C513214D22D300F291CE /* CareProvider.swift in Sources */,
 				E038C50C214D124200F291CE /* Stylesheet.swift in Sources */,
+				E08C302F214E2A3A0042E806 /* AirTraffic.swift in Sources */,
 				E038C50A214D120C00F291CE /* Style.swift in Sources */,
+				E0CAC409214D7CFA0030200A /* GeoLocation.swift in Sources */,
+				E08C302B214D8CEB0042E806 /* DestinationAnnotation.swift in Sources */,
 				E038C51B214D3CD300F291CE /* Constants.swift in Sources */,
 				E038C511214D21D900F291CE /* Client.swift in Sources */,
+				E0CAC403214D74030030200A /* Firebase+ReactiveKit.swift in Sources */,
 				E038C51F214D48B800F291CE /* GeoCode.swift in Sources */,
 				E038C521214D4CD200F291CE /* OrderDTO.swift in Sources */,
 				E038C503214D0FB500F291CE /* Drug.swift in Sources */,
@@ -543,7 +599,7 @@
 		};
 		E038C4F5214CF71200F291CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6ECF038C72BFAE70215FB5E3 /* Pods-DrugDrone.debug.xcconfig */;
+			baseConfigurationReference = 4DF04324984924EC15D98F58 /* Pods-DrugDrone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DrugDrone/DrugDrone.entitlements;
@@ -565,7 +621,7 @@
 		};
 		E038C4F6214CF71200F291CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4204AC20194184A62B35588E /* Pods-DrugDrone.release.xcconfig */;
+			baseConfigurationReference = 594558479966A6982F319D1C /* Pods-DrugDrone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DrugDrone/DrugDrone.entitlements;

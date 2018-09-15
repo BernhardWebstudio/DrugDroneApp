@@ -24,6 +24,15 @@ class DrugsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let pendingAction = UserDefaults.standard.string(forKey: "pendingAction"), let index = Int(pendingAction) {
+            UserDefaults.standard.removeObject(forKey: "pendingAction")
+            self.handleOrder(for: viewModel.drugs[index])
+        }
+    }
+    
     func bindTableView() {
         viewModel.drugs.bind(to: tableView) { [unowned self] drugs, indexPath, tableView in
             let cell = tableView.dequeueReusableCell(withIdentifier: "drugCell") as! DrugTableViewCell
@@ -62,7 +71,7 @@ class DrugsTableViewController: UITableViewController {
                 MBProgressHUD.showAdded(to: me.parent!.view, animated: true)
             case .loaded(let value):
                 MBProgressHUD.hide(for: me.parent!.view, animated: true)
-                print(value)
+                self.performSegue(withIdentifier: "deliverySegue", sender: value)
             case .failed(let error):
                 MBProgressHUD.hide(for: me.parent!.view, animated: true)
                 me.presentSimpleAlertDialog(header: "Error", message: error.localizedDescription)
@@ -111,14 +120,11 @@ class DrugsTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let viewController = segue.destination as! DrugDeliveryViewController
+        viewController.viewModel.order = sender as? OrderDTO
     }
-    */
-
 }
