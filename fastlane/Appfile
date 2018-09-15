@@ -1,0 +1,4 @@
+app_identifier("ch.hackzurich.ios.DrugDrone") # The bundle identifier of your app
+apple_id("svacha@msn.com") # Your Apple email address
+itc_team_id("117350370") # App Store Connect Team ID
+team_id("5P5942GPL5") # Developer Portal Team ID

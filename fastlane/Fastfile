@@ -1,0 +1,35 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+lane :local do
+  register_devices(
+    devices: {
+      "Michal's iPhone 7": "0380aca60adada7b2828012aeace6586e4944bbf"
+    },
+    username: "svacha@msn.com"
+  )
+
+  match(type: "appstore", force: true)
+end
+
+lane :beta do
+  gym(scheme: "DrugDrone")
+  pilot(
+    skip_waiting_for_build_processing: true,
+    username: "svacha@msn.com"
+  )
+end
