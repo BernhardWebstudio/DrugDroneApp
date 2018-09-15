@@ -17,8 +17,9 @@ target 'DrugDrone' do
   pod 'Material', '~> 2.12'
   
   # Firebase
-  pod 'Firebase/Core', '~> 4.0'
-  pod 'Firebase/Database', '~> 4.0'
-  pod 'Firebase/Auth', '~> 4.0'
+  pod 'Firebase/Core', '~> 5.8'
+  pod 'Firebase/Database', '~> 5.8'
+  pod 'Firebase/Auth', '~> 5.8'
+  pod 'Firebase/Messaging', '~> 5.8'
   
 end

@@ -25,3 +25,4 @@ fastlane/test_output/*.html
 *.zip
 *.ipa
 GoogleService-Info.plist
+APN
